@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catolge/pages/home_page.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_catolge/pages/login_page.dart';
 
 void main() {
@@ -7,8 +8,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     //build is a function which we are overriding
@@ -17,14 +16,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       // home: HomePage(),
       themeMode: ThemeMode.light,
-      theme: ThemeData(primarySwatch: Colors.green),
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+        fontFamily: GoogleFonts.lato().fontFamily,
+        //
+      ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
 
         //In map there is a key this is called dictionary
         //Map format is like json
       ),
-      initialRoute: "/home", // by default home will open
+      //initialRoute: "/home", // by default home will open
       routes: {
         //"/" means default entry of home page in route so we dont have to write about homepage again
         "/": (context) => LoginPage(),
